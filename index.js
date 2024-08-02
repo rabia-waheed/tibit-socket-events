@@ -62,6 +62,14 @@ io.on('connection', (socket) => {
     console.log('nextEpisode: ' + msg);
     io.emit('nextEpisode', msg);
   });
+  socket.on('extendMeeting', (msg) => {
+    console.log('extendMeeting: ' + msg);
+    io.emit('extendMeeting', msg);
+  });
+  socket.on('hostLeave', (msg) => {
+    console.log('hostLeave: ' + msg);
+    io.emit('hostLeave', msg);
+  });
     socket.on('disconnect', () => {
       console.log('user disconnected');
     });
