@@ -40,11 +40,14 @@ io.on('connection', (socket) => {
      
       io.emit('videoAction', action);
     });
-    socket.on('test', (msg) => {
-      console.log('testtt: ' + msg);
-      io.emit('test', msg);
+    socket.on('meetingJoin', (msg) => {
+      console.log('meetingJoin: ' + msg);
+      io.emit('meetingJoin', msg);
     });
-
+    socket.on('currentState', (msg) => {
+      console.log('currentState: ' + msg);
+      io.emit('currentState', msg);
+    });
     socket.on('nextStep', (msg) => {
       console.log('nextStep: ' + msg);
       io.emit('nextStep', msg);
