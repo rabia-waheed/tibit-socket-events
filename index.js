@@ -77,4 +77,8 @@ io.on('connection', (socket) => {
       console.log('user disconnected');
     });
   });
+<<<<<<< HEAD
   // commented this line in dev-2
+=======
+// commented this line
+>>>>>>> dev
